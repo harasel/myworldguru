@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MY WORLD GURU | Luxury Travel Design & Bespoke Trip Planning — Santorini, Greece</title>
+<meta name="description" content="MY WORLD GURU — A luxury travel design and bespoke trip planning agency based in Santorini, Greece. Personalized journeys, private experiences, unforgettable memories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        santorini: {
+          50: '#FDF6F0',
+          100: '#FBE8D6',
+          200: '#F6C9A8',
+          300: '#F0A575',
+          400: '#E8824A',
+          500: '#E8621C',
+          600: '#D1501A',
+          700: '#A83D18',
+          800: '#7A2D14',
+          900: '#4A1C0C',
+        },
+        charcoal: {
+          50: '#F7F7F7',
+          100: '#E8E8E8',
+          200: '#D1D1D1',
+          300: '#A8A8A8',
+          400: '#7A7A7A',
+          500: '#5A5A5A',
+          600: '#3A3A3A',
+          700: '#2C2C2C',
+          800: '#1E1E1E',
+          900: '#111111',
+        },
+        warm: {
+          50: '#FAF8F5',
+          100: '#F5F3EF',
+          200: '#EBE7E0',
+          300: '#DDD8CE',
+        },
+        mediterranean: {
+          50: '#E8F0F7',
+          100: '#B8D4E8',
+          200: '#7FB0D4',
+          300: '#4A8BC0',
+          400: '#1B4D7A',
+          500: '#153B5E',
+          600: '#0F2B45',
+        }
+      },
+      fontFamily: {
+        playfair: ['"Playfair Display"', 'serif'],
+        montserrat: ['"Montserrat"', 'sans-serif'],
+        inter: ['"Inter"', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: #FAF8F5; color: #2C2C2C; }
+  
+  .font-playfair { font-family: 'Playfair Display', serif; }
+  .font-montserrat { font-family: 'Montserrat', sans-serif; }
+  .font-inter { font-family: 'Inter', sans-serif; }
+  
+  .text-balance { text-wrap: balance; }
+  
+  /* Luxury underline animation */
+  .luxury-link { position: relative; }
+  .luxury-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #E8621C;
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .luxury-link:hover::after { width: 100%; }
+  
+  /* Button styles */
+  .btn-primary {
+    background: #E8621C;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 1rem 2.5rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary:hover {
+    background: #D1501A;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(232, 98, 28, 0.3);
+  }
+  
+  .btn-outline {
+    background: transparent;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 1rem 2.5rem;
+    border: 1px solid rgba(255,255,255,0.6);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .btn-outline:hover {
+    background: white;
+    color: #2C2C2C;
+    border-color: white;
+  }
+  
+  .btn-dark {
+    background: #2C2C2C;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 1rem 2.5rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .btn-dark:hover {
+    background: #E8621C;
+    transform: translateY(-2px);
+  }
+  
+  /* Fade-in animation */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Card hover */
+  .experience-card {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .experience-card:hover {
+    transform: translateY(-8px);
+  }
+  .experience-card .card-overlay {
+    transition: opacity 0.6s ease;
+  }
+  .experience-card:hover .card-overlay {
+    opacity: 0.85;
+  }
+  
+  /* Destination card */
+  .dest-card {
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .dest-card:hover {
+    transform: scale(1.03);
+  }
+  .dest-card:hover img {
+    transform: scale(1.08);
+  }
+  .dest-card img {
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  /* Testimonial slider */
+  .testimonial-track {
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  /* Stat counter */
+  .stat-number {
+    font-variant-numeric: tabular-nums;
+  }
+  
+  /* Form input */
+  .form-input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: white;
+    border: 1px solid #E8E8E8;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #2C2C2C;
+    transition: all 0.3s ease;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: #E8621C;
+    box-shadow: 0 0 0 3px rgba(232, 98, 28, 0.1);
+  }
+  .form-input::placeholder {
+    color: #A8A8A8;
+  }
+  
+  /* Timeline step */
+  .step-line::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #E8621C, #E8E8E8);
+  }
+  
+  /* Scroll indicator */
+  @keyframes scrollDown {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(8px); opacity: 0; }
+  }
+  .scroll-indicator span {
+    animation: scrollDown 1.5s ease-in-out infinite;
+  }
+  
+  /* Mobile menu */
+  .mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .mobile-menu.open {
+    transform: translateX(0);
+  }
+  
+  /* Divider */
+  .luxury-divider {
+    width: 60px;
+    height: 1px;
+    background: #E8621C;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #FAF8F5; }
+  ::-webkit-scrollbar-thumb { background: #D1D1D1; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #E8621C; }
+  
+  /* Parallax hero */
+  .hero-parallax {
+    will-change: transform;
+  }
+  
+  /* Quote mark */
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    line-height: 1;
+    color: #E8621C;
+    opacity: 0.3;
+  }
+  
+  /* Floating label */
+  .floating-label {
+    position: relative;
+  }
+  .floating-label input:focus + label,
+  .floating-label input:not(:placeholder-shown) + label {
+    transform: translateY(-1.5rem) scale(0.85);
+    color: #E8621C;
+  }
+  .floating-label label {
+    transition: all 0.2s ease;
+    transform-origin: left;
+  }
+</style>
+</head>
+<body class="overflow-x-hidden">
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex items-center justify-between h-20 lg:h-24">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="myworldguru1.png" alt="logo" style="width: 100px;">
+      </a>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center gap-10">
+        <a href="#why" class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-700 hover:text-santorini-500 transition-colors luxury-link">Why Us</a>
+        <a href="#experiences" class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-700 hover:text-santorini-500 transition-colors luxury-link">Experiences</a>
+        <a href="#destinations" class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-700 hover:text-santorini-500 transition-colors luxury-link">Destinations</a>
+        <a href="#process" class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-700 hover:text-santorini-500 transition-colors luxury-link">Process</a>
+        <a href="#testimonials" class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-700 hover:text-santorini-500 transition-colors luxury-link">Stories</a>
+        <a href="#consultation" class="btn-primary">Plan My Journey</a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+        <span class="w-6 h-0.5 bg-charcoal-700 transition-all duration-300" id="menuLine1"></span>
+        <span class="w-6 h-0.5 bg-charcoal-700 transition-all duration-300" id="menuLine2"></span>
+        <span class="w-4 h-0.5 bg-charcoal-700 transition-all duration-300 ml-auto" id="menuLine3"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu fixed inset-0 z-40 bg-warm-50 flex flex-col justify-center items-center lg:hidden">
+  <button id="closeMenu" class="absolute top-6 right-6 p-2" aria-label="Close menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2C2C2C" stroke-width="2">
+      <path d="M18 6L6 18M6 6l12 12"/>
+    </svg>
+  </button>
+  <div class="flex flex-col items-center gap-8">
+    <a href="#why" class="mobile-link font-playfair text-3xl text-charcoal-800">Why Us</a>
+    <a href="#experiences" class="mobile-link font-playfair text-3xl text-charcoal-800">Experiences</a>
+    <a href="#destinations" class="mobile-link font-playfair text-3xl text-charcoal-800">Destinations</a>
+    <a href="#process" class="mobile-link font-playfair text-3xl text-charcoal-800">Process</a>
+    <a href="#testimonials" class="mobile-link font-playfair text-3xl text-charcoal-800">Stories</a>
+    <a href="#consultation" class="btn-primary mt-4">Plan My Journey</a>
+  </div>
+</div>
+
+<!-- HERO SECTION -->
+<section class="relative h-screen min-h-[700px] overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 hero-parallax">
+    <img src="hero_bg.jpg" alt="Luxury Santorini caldera view at sunset" class="w-full h-full object-cover object-center">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent"></div>
+  </div>
+  
+  <!-- Content -->
+  <div class="relative h-full flex items-center">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 w-full">
+      <div class="max-w-3xl">
+        <!-- Eyebrow -->
+        <div class="flex items-center gap-4 mb-8 fade-up">
+          <div class="w-12 h-px bg-santorini-500"></div>
+          <span class="font-montserrat text-xs font-medium tracking-[0.3em] uppercase text-white/90">Luxury Travel Design · Santorini, Greece</span>
+        </div>
+        
+        <!-- Headline -->
+        <h1 class="font-playfair font-semibold text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white leading-[1.05] mb-8 text-balance fade-up" style="transition-delay: 0.1s">
+          Journeys Crafted<br>
+          <span class="font-playfair italic text-santorini-300">Beyond the Ordinary</span>
+        </h1>
+        
+        <!-- Subheadline -->
+        <p class="font-inter text-lg md:text-xl text-white/85 leading-relaxed mb-10 max-w-xl fade-up" style="transition-delay: 0.2s">
+          We design deeply personal travel experiences across the Greek Islands — where every detail is curated, every moment intentional, and every journey unforgettable.
+        </p>
+        
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-12 fade-up" style="transition-delay: 0.3s">
+          <a href="#consultation" class="btn-primary text-center">Plan My Journey</a>
+          <a href="#process" class="btn-outline text-center">Schedule Consultation</a>
+        </div>
+        
+        <!-- Trust Indicators -->
+        <div class="flex flex-wrap items-center gap-8 fade-up" style="transition-delay: 0.4s">
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+            <span class="font-montserrat text-xs text-white/80 tracking-wide">500+ Custom Journeys</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+            <span class="font-montserrat text-xs text-white/80 tracking-wide">98% Client Satisfaction</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+            <span class="font-montserrat text-xs text-white/80 tracking-wide">Local Santorini Experts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator flex flex-col items-center gap-2">
+    <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-white/70">Scroll</span>
+    <div class="w-px h-8 bg-white/30 relative overflow-hidden">
+      <span class="absolute top-0 left-0 w-full h-3 bg-white"></span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: WHY MY WORLD GURU -->
+<section id="why" class="py-24 lg:py-32 bg-warm-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20 fade-up">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <div class="w-12 h-px bg-santorini-500"></div>
+        <span class="font-montserrat text-xs font-medium tracking-[0.3em] uppercase text-santorini-500">Why Choose Us</span>
+        <div class="w-12 h-px bg-santorini-500"></div>
+      </div>
+      <h2 class="font-playfair font-semibold text-4xl md:text-5xl lg:text-6xl text-charcoal-800 leading-tight mb-6">
+        The Art of <span class="font-playfair italic text-santorini-500">Bespoke</span> Travel
+      </h2>
+      <p class="font-inter text-lg text-charcoal-500 leading-relaxed">
+        We are not a booking portal. We are your personal travel architects — designing journeys that reflect who you are, how you travel, and what moves you.
+      </p>
+    </div>
+    
+    <!-- Icon Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+      <!-- Card 1 -->
+      <div class="group bg-white p-10 lg:p-8 border border-warm-200 hover:border-santorini-200 transition-all duration-500 fade-up">
+        <div class="w-14 h-14 mb-6 flex items-center justify-center bg-santorini-50 group-hover:bg-santorini-500 transition-colors duration-500">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8621C" stroke-width="1.5" class="group-hover:stroke-white transition-colors duration-500">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="font-playfair font-semibold text-xl text-charcoal-800 mb-3">Bespoke Travel Planning</h3>
+        <p class="font-inter text-sm text-charcoal-500 leading-relaxed">Every journey is designed from scratch — no templates, no packages. Your trip, your rules, your rhythm.</p>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="group bg-white p-10 lg:p-8 border border-warm-200 hover:border-santorini-200 transition-all duration-500 fade-up" style="transition-delay: 0.1s">
+        <div class="w-14 h-14 mb-6 flex items-center justify-center bg-santorini-50 group-hover:bg-santorini-500 transition-colors duration-500">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8621C" stroke-width="1.5" class="group-hover:stroke-white transition-colors duration-500">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3 class="font-playfair font-semibold text-xl text-charcoal-800 mb-3">Local Expertise</h3>
+        <p class="font-inter text-sm text-charcoal-500 leading-relaxed">Our Santorini-based gurus know every hidden path, every secret sunset, every authentic taverna.</p>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="group bg-white p-10 lg:p-8 border border-warm-200 hover:border-santorini-200 transition-all duration-500 fade-up" style="transition-delay: 0.2s">
+        <div class="w-14 h-14 mb-6 flex items-center justify-center bg-santorini-50 group-hover:bg-santorini-500 transition-colors duration-500">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8621C" stroke-width="1.5" class="group-hover:stroke-white transition-colors duration-500">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+        <h3 class="font-playfair font-semibold text-xl text-charcoal-800 mb-3">VIP Experiences</h3>
+        <p class="font-inter text-sm text-charcoal-500 leading-relaxed">Private yacht charters, exclusive dining, helicopter flights — access to what others cannot reach.</p>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="group bg-white p-10 lg:p-8 border border-warm-200 hover:border-santorini-200 transition-all duration-500 fade-up" style="transition-delay: 0.3s">
+        <div class="w-14 h-14 mb-6 flex items-center justify-center bg-santorini-50 group-hover:bg-santorini-500 transition-colors duration-500">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E8621C" stroke-width="1.5" class="group-hover:stroke-white transition-colors duration-500">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+        </div>
+        <h3 class="font-playfair font-semibold text-xl text-charcoal-800 mb-3">Stress-Free Travel</h3>
+        <p class="font-inter text-sm text-charcoal-500 leading-relaxed">From airport pickup to sunset toast — we handle every detail so you can simply be present.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: SIGNATURE EXPERIENCES -->
+<section id="experiences" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20 fade-up">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <div class="w-12 h-px bg-santorini-500"></div>
+        <span class="font-montserrat text-xs font-medium tracking-[0.3em] uppercase text-santorini-500">Signature Experiences</span>
+        <div class="w-12 h-px bg-santorini-500"></div>
+      </div>
+      <h2 class="font-playfair font-semibold text-4xl md:text-5xl lg:text-6xl text-charcoal-800 leading-tight mb-6">
+        Curated Moments,<br><span class="font-playfair italic text-santorini-500">Unforgettable Memories</span>
+      </h2>
+      <p class="font-inter text-lg text-charcoal-500 leading-relaxed">
+        From private yacht sunsets to ancient cultural immersions — each experience is designed to move you.
+      </p>
+    </div>
+    
+    <!-- Experience Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Experience 1 -->
+      <div class="experience-card relative group overflow-hidden rounded-sm fade-up cursor-pointer" style="aspect-ratio: 4/5">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/1ead52057-f102-47f3-bdab-d67e74176f9e.png" alt="Luxury Island Escape - Santorini private villa with infinity pool" class="w-full h-full object-cover">
+        <div class="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-70"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">01</span>
+          <h3 class="font-playfair font-semibold text-2xl text-white mb-2">Luxury Island Escapes</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">Private villas, cliffside suites, and exclusive retreats across the Cyclades.</p>
+        </div>
+      </div>
+      
+      <!-- Experience 2 -->
+      <div class="experience-card relative group overflow-hidden rounded-sm fade-up cursor-pointer md:mt-12" style="aspect-ratio: 4/5; transition-delay: 0.1s">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/13d173c4e-70b3-9461-9a8b-788b055246bb.png" alt="Romantic Getaway - Couple walking through Oia at sunset" class="w-full h-full object-cover">
+        <div class="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-70"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">02</span>
+          <h3 class="font-playfair font-semibold text-2xl text-white mb-2">Romantic Getaways</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">Intimate sunsets, private dinners, and moments designed for two.</p>
+        </div>
+      </div>
+      
+      <!-- Experience 3 -->
+      <div class="experience-card relative group overflow-hidden rounded-sm fade-up cursor-pointer" style="aspect-ratio: 4/5; transition-delay: 0.2s">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/1266b28b3-8b4d-4691-9deb-f1a1fd0a69b2.png" alt="Private Yacht Experience - Couple on catamaran in Santorini caldera" class="w-full h-full object-cover">
+        <div class="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-70"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">03</span>
+          <h3 class="font-playfair font-semibold text-2xl text-white mb-2">Private Yacht Experiences</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">Sail the caldera in style — catamarans, motor yachts, and sunset cruises.</p>
+        </div>
+      </div>
+      
+      <!-- Experience 4 -->
+      <div class="experience-card relative group overflow-hidden rounded-sm fade-up cursor-pointer md:mt-12" style="aspect-ratio: 4/5; transition-delay: 0.1s">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/1a755de88-9b84-4d04-8f79-00eaae1f38ae.png" alt="Cultural Journey - Traveler exploring ancient Akrotiri ruins" class="w-full h-full object-cover">
+        <div class="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-70"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">04</span>
+          <h3 class="font-playfair font-semibold text-2xl text-white mb-2">Cultural Journeys</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">Ancient ruins, volcanic wineries, and authentic Greek heritage experiences.</p>
+        </div>
+      </div>
+      
+      <!-- Experience 5 -->
+      <div class="experience-card relative group overflow-hidden rounded-sm fade-up cursor-pointer" style="aspect-ratio: 4/5; transition-delay: 0.2s">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/14fd6926a-de76-4cb9-b31c-d639d01c99f4.png" alt="Family Adventure - Luxury family beach day in Santorini" class="w-full h-full object-cover">
+        <div class="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-70"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">05</span>
+          <h3 class="font-playfair font-semibold text-2xl text-white mb-2">Family Adventures</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">Multi-generational journeys designed for wonder, connection, and joy.</p>
+        </div>
+      </div>
+      
+      <!-- Experience 6 -->
+      <div class="experience-card relative group overflow-hidden rounded-sm fade-up cursor-pointer md:mt-12" style="aspect-ratio: 4/5; transition-delay: 0.3s">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/111816629-e3be-414b-bb0a-5e5eeb109baf.png" alt="Honeymoon Planning - Elegant couple champagne toast at Santorini resort" class="w-full h-full object-cover">
+        <div class="card-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-70"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">06</span>
+          <h3 class="font-playfair font-semibold text-2xl text-white mb-2">Honeymoon Planning</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">Begin your forever with a journey as extraordinary as your love story.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: HOW IT WORKS -->
+<section id="process" class="py-24 lg:py-32 bg-warm-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20 fade-up">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <div class="w-12 h-px bg-santorini-500"></div>
+        <span class="font-montserrat text-xs font-medium tracking-[0.3em] uppercase text-santorini-500">Our Process</span>
+        <div class="w-12 h-px bg-santorini-500"></div>
+      </div>
+      <h2 class="font-playfair font-semibold text-4xl md:text-5xl lg:text-6xl text-charcoal-800 leading-tight mb-6">
+        How We <span class="font-playfair italic text-santorini-500">Design</span> Your Journey
+      </h2>
+      <p class="font-inter text-lg text-charcoal-500 leading-relaxed">
+        A seamless four-step process — from first conversation to final sunset.
+      </p>
+    </div>
+    
+    <!-- Timeline Steps -->
+    <div class="relative">
+      <!-- Desktop Timeline Line -->
+      <div class="hidden lg:block absolute top-24 left-0 right-0 h-px bg-gradient-to-r from-transparent via-santorini-300 to-transparent"></div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8">
+        <!-- Step 1 -->
+        <div class="relative text-center fade-up">
+          <div class="relative z-10 w-16 h-16 mx-auto mb-8 flex items-center justify-center bg-white border-2 border-santorini-500 rounded-full">
+            <span class="font-playfair font-semibold text-2xl text-santorini-500">01</span>
+          </div>
+          <h3 class="font-playfair font-semibold text-xl text-charcoal-800 mb-3">Discovery Call</h3>
+          <p class="font-inter text-sm text-charcoal-500 leading-relaxed">We begin with a personal conversation to understand your travel style, desires, and dreams.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="relative text-center fade-up" style="transition-delay: 0.15s">
+          <div class="relative z-10 w-16 h-16 mx-auto mb-8 flex items-center justify-center bg-white border-2 border-santorini-500 rounded-full">
+            <span class="font-playfair font-semibold text-2xl text-santorini-500">02</span>
+          </div>
+          <h3 class="font-playfair font-semibold text-xl text-charcoal-800 mb-3">Custom Itinerary Design</h3>
+          <p class="font-inter text-sm text-charcoal-500 leading-relaxed">Our gurus craft a day-by-day journey tailored to your rhythm, interests, and budget.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="relative text-center fade-up" style="transition-delay: 0.3s">
+          <div class="relative z-10 w-16 h-16 mx-auto mb-8 flex items-center justify-center bg-white border-2 border-santorini-500 rounded-full">
+            <span class="font-playfair font-semibold text-2xl text-santorini-500">03</span>
+          </div>
+          <h3 class="font-playfair font-semibold text-xl text-charcoal-800 mb-3">Travel Preparation</h3>
+          <p class="font-inter text-sm text-charcoal-500 leading-relaxed">Every reservation, transfer, and experience is confirmed. You receive your complete travel dossier.</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="relative text-center fade-up" style="transition-delay: 0.45s">
+          <div class="relative z-10 w-16 h-16 mx-auto mb-8 flex items-center justify-center bg-santorini-500 border-2 border-santorini-500 rounded-full">
+            <span class="font-playfair font-semibold text-2xl text-white">04</span>
+          </div>
+          <h3 class="font-playfair font-semibold text-xl text-charcoal-800 mb-3">Enjoy Your Journey</h3>
+          <p class="font-inter text-sm text-charcoal-500 leading-relaxed">Arrive, relax, and immerse. Your guru remains available throughout for live support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: FEATURED DESTINATIONS -->
+<section id="destinations" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20 fade-up">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <div class="w-12 h-px bg-santorini-500"></div>
+        <span class="font-montserrat text-xs font-medium tracking-[0.3em] uppercase text-santorini-500">Featured Destinations</span>
+        <div class="w-12 h-px bg-santorini-500"></div>
+      </div>
+      <h2 class="font-playfair font-semibold text-4xl md:text-5xl lg:text-6xl text-charcoal-800 leading-tight mb-6">
+        Explore the <span class="font-playfair italic text-santorini-500">Greek Islands</span>
+      </h2>
+      <p class="font-inter text-lg text-charcoal-500 leading-relaxed">
+        Each island holds its own magic. We guide you to the ones that speak to your soul.
+      </p>
+    </div>
+    
+    <!-- Destinations Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Santorini -->
+      <div class="dest-card relative group overflow-hidden rounded-sm fade-up cursor-pointer" style="aspect-ratio: 3/4">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/185ce39e1-2ad6-45a8-960f-10aede49987b.png" alt="Santorini - Oia village with blue domed churches at sunset" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">Cyclades · Greece</span>
+          <h3 class="font-playfair font-semibold text-3xl text-white mb-2">Santorini</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed">Iconic caldera views, volcanic beaches, and the world's most famous sunsets.</p>
+          <div class="mt-4 flex items-center gap-2 text-santorini-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <span class="font-montserrat text-xs font-semibold tracking-widest uppercase">Explore</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mykonos -->
+      <div class="dest-card relative group overflow-hidden rounded-sm fade-up cursor-pointer" style="aspect-ratio: 3/4; transition-delay: 0.1s">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/1e3e1a001-8884-411c-94b4-555af33d71b2.png" alt="Mykonos - Iconic windmills and Little Venice waterfront at sunset" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">Cyclades · Greece</span>
+          <h3 class="font-playfair font-semibold text-3xl text-white mb-2">Mykonos</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed">Cosmopolitan energy, pristine beaches, and legendary Mediterranean nightlife.</p>
+          <div class="mt-4 flex items-center gap-2 text-santorini-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <span class="font-montserrat text-xs font-semibold tracking-widest uppercase">Explore</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Athens -->
+      <div class="dest-card relative group overflow-hidden rounded-sm fade-up cursor-pointer" style="aspect-ratio: 3/4; transition-delay: 0.2s">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/14383b10d-13a8-46a4-aaf6-ab1d218a1940.png" alt="Athens - The Acropolis Parthenon at golden hour" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">Attica · Greece</span>
+          <h3 class="font-playfair font-semibold text-3xl text-white mb-2">Athens</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed">Ancient wonders, vibrant neighborhoods, and the cradle of Western civilization.</p>
+          <div class="mt-4 flex items-center gap-2 text-santorini-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <span class="font-montserrat text-xs font-semibold tracking-widest uppercase">Explore</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Crete -->
+      <div class="dest-card relative group overflow-hidden rounded-sm fade-up cursor-pointer" style="aspect-ratio: 3/4">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/1008a2a27-836c-4d9b-9e43-b32eaf274cac.png" alt="Crete - Elafonissi pink sand beach at sunset" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">Largest Greek Island</span>
+          <h3 class="font-playfair font-semibold text-3xl text-white mb-2">Crete</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed">Pink sand beaches, Minoan palaces, and authentic mountain villages.</p>
+          <div class="mt-4 flex items-center gap-2 text-santorini-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <span class="font-montserrat text-xs font-semibold tracking-widest uppercase">Explore</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Paros -->
+      <div class="dest-card relative group overflow-hidden rounded-sm fade-up cursor-pointer" style="aspect-ratio: 3/4; transition-delay: 0.1s">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/1335fb359-6ad1-4b3a-85d1-1d0392236a11.png" alt="Paros - Naoussa harbor with white boats and bougainvillea" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">Cyclades · Greece</span>
+          <h3 class="font-playfair font-semibold text-3xl text-white mb-2">Paros</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed">Charming harbors, marble villages, and the authentic soul of the Cyclades.</p>
+          <div class="mt-4 flex items-center gap-2 text-santorini-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <span class="font-montserrat text-xs font-semibold tracking-widest uppercase">Explore</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Naxos -->
+      <div class="dest-card relative group overflow-hidden rounded-sm fade-up cursor-pointer" style="aspect-ratio: 3/4; transition-delay: 0.2s">
+        <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/1e4060be4-61f0-46d8-9f98-3fcdb3654bea.png" alt="Naxos - Portara ancient marble gate at sunset" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <span class="font-montserrat text-[10px] tracking-[0.3em] uppercase text-santorini-300 mb-2 block">Cyclades · Greece</span>
+          <h3 class="font-playfair font-semibold text-3xl text-white mb-2">Naxos</h3>
+          <p class="font-inter text-sm text-white/80 leading-relaxed">Untouched beaches, ancient temples, and the most authentic island experience.</p>
+          <div class="mt-4 flex items-center gap-2 text-santorini-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <span class="font-montserrat text-xs font-semibold tracking-widest uppercase">Explore</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: CLIENT TESTIMONIALS -->
+<section id="testimonials" class="py-24 lg:py-32 bg-warm-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20 fade-up">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <div class="w-12 h-px bg-santorini-500"></div>
+        <span class="font-montserrat text-xs font-medium tracking-[0.3em] uppercase text-santorini-500">Client Stories</span>
+        <div class="w-12 h-px bg-santorini-500"></div>
+      </div>
+      <h2 class="font-playfair font-semibold text-4xl md:text-5xl lg:text-6xl text-charcoal-800 leading-tight mb-6">
+        Words From Our <span class="font-playfair italic text-santorini-500">Travelers</span>
+      </h2>
+    </div>
+    
+    <!-- Testimonials Slider -->
+    <div class="relative">
+      <div class="overflow-hidden">
+        <div id="testimonialTrack" class="testimonial-track flex">
+          <!-- Testimonial 1 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+            <div class="bg-white p-10 lg:p-12 border border-warm-200 h-full">
+              <div class="quote-mark mb-4">"</div>
+              <p class="font-inter text-base text-charcoal-600 leading-relaxed mb-8 italic">
+                MY WORLD GURU transformed our honeymoon into something beyond imagination. Every detail — from the private yacht sunset to the hidden taverna dinner — was perfection. We felt like the only people in Santorini.
+              </p>
+              <div class="flex items-center gap-4 pt-6 border-t border-warm-200">
+                <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/16aee3d05-3c68-45f3-bd48-5d00ac8b56a1.png" alt="Sophia Chen" class="w-14 h-14 rounded-full object-cover">
+                <div>
+                  <h4 class="font-montserrat font-semibold text-sm text-charcoal-800">Sophia Chen</h4>
+                  <p class="font-inter text-xs text-charcoal-400">Honeymoon · Santorini & Mykonos</p>
+                  <div class="flex gap-1 mt-1">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 2 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+            <div class="bg-white p-10 lg:p-12 border border-warm-200 h-full">
+              <div class="quote-mark mb-4">"</div>
+              <p class="font-inter text-base text-charcoal-600 leading-relaxed mb-8 italic">
+                As a family of five, we thought a luxury Greek island trip was impossible. MY WORLD GURU proved us wrong. The kids still talk about the private beach day and the cooking class with the local chef.
+              </p>
+              <div class="flex items-center gap-4 pt-6 border-t border-warm-200">
+                <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/149455e18-4db0-4b9a-9803-b9b136b8184a.png" alt="James & Victoria Hartwell" class="w-14 h-14 rounded-full object-cover">
+                <div>
+                  <h4 class="font-montserrat font-semibold text-sm text-charcoal-800">James Hartwell</h4>
+                  <p class="font-inter text-xs text-charcoal-400">Family Journey · Santorini & Crete</p>
+                  <div class="flex gap-1 mt-1">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 3 -->
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+            <div class="bg-white p-10 lg:p-12 border border-warm-200 h-full">
+              <div class="quote-mark mb-4">"</div>
+              <p class="font-inter text-base text-charcoal-600 leading-relaxed mb-8 italic">
+                The level of personal attention was extraordinary. Our guru knew our preferences before we did. The helicopter flight over the caldera at sunset — a moment we'll never forget.
+              </p>
+              <div class="flex items-center gap-4 pt-6 border-t border-warm-200">
+                <div class="w-14 h-14 rounded-full bg-santorini-100 flex items-center justify-center">
+                  <span class="font-playfair font-semibold text-santorini-600 text-lg">A</span>
+                </div>
+                <div>
+                  <h4 class="font-montserrat font-semibold text-sm text-charcoal-800">Alexandra Rossi</h4>
+                  <p class="font-inter text-xs text-charcoal-400">Anniversary · Santorini Exclusive</p>
+                  <div class="flex gap-1 mt-1">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slider Controls -->
+      <div class="flex justify-center gap-3 mt-12">
+        <button id="prevBtn" class="w-12 h-12 border border-charcoal-200 hover:border-santorini-500 hover:bg-santorini-500 hover:text-white transition-all duration-300 flex items-center justify-center text-charcoal-600" aria-label="Previous">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button id="nextBtn" class="w-12 h-12 border border-charcoal-200 hover:border-santorini-500 hover:bg-santorini-500 hover:text-white transition-all duration-300 flex items-center justify-center text-charcoal-600" aria-label="Next">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: WHY CLIENTS CHOOSE US (STATS) -->
+<section class="py-24 lg:py-32 bg-charcoal-800 relative overflow-hidden">
+  <!-- Decorative -->
+  <div class="absolute top-0 left-0 w-96 h-96 bg-santorini-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-mediterranean-400/10 rounded-full blur-3xl"></div>
+  
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20 fade-up">
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <div class="w-12 h-px bg-santorini-500"></div>
+        <span class="font-montserrat text-xs font-medium tracking-[0.3em] uppercase text-santorini-400">By The Numbers</span>
+        <div class="w-12 h-px bg-santorini-500"></div>
+      </div>
+      <h2 class="font-playfair font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+        Why Clients <span class="font-playfair italic text-santorini-400">Choose Us</span>
+      </h2>
+    </div>
+    
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div class="text-center fade-up">
+        <div class="font-playfair font-semibold text-5xl md:text-6xl lg:text-7xl text-santorini-400 stat-number mb-3" data-target="500">0</div>
+        <div class="font-montserrat text-xs tracking-[0.25em] uppercase text-white/60">Custom Trips</div>
+        <div class="w-8 h-px bg-santorini-500 mx-auto mt-4"></div>
+      </div>
+      <div class="text-center fade-up" style="transition-delay: 0.1s">
+        <div class="font-playfair font-semibold text-5xl md:text-6xl lg:text-7xl text-santorini-400 stat-number mb-3"><span data-target="98">0</span>%</div>
+        <div class="font-montserrat text-xs tracking-[0.25em] uppercase text-white/60">Client Satisfaction</div>
+        <div class="w-8 h-px bg-santorini-500 mx-auto mt-4"></div>
+      </div>
+      <div class="text-center fade-up" style="transition-delay: 0.2s">
+        <div class="font-playfair font-semibold text-5xl md:text-6xl lg:text-7xl text-santorini-400 stat-number mb-3"><span data-target="20">0</span>+</div>
+        <div class="font-montserrat text-xs tracking-[0.25em] uppercase text-white/60">Destination Experts</div>
+        <div class="w-8 h-px bg-santorini-500 mx-auto mt-4"></div>
+      </div>
+      <div class="text-center fade-up" style="transition-delay: 0.3s">
+        <div class="font-playfair font-semibold text-5xl md:text-6xl lg:text-7xl text-santorini-400 stat-number mb-3"><span data-target="10">0</span>+</div>
+        <div class="font-montserrat text-xs tracking-[0.25em] uppercase text-white/60">Years Experience</div>
+        <div class="w-8 h-px bg-santorini-500 mx-auto mt-4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: CONSULTATION FORM -->
+<section id="consultation" class="py-24 lg:py-32 bg-warm-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+      <!-- Left: Info -->
+      <div class="fade-up">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 h-px bg-santorini-500"></div>
+          <span class="font-montserrat text-xs font-medium tracking-[0.3em] uppercase text-santorini-500">Begin Your Journey</span>
+        </div>
+        <h2 class="font-playfair font-semibold text-4xl md:text-5xl lg:text-6xl text-charcoal-800 leading-tight mb-8">
+          Let's Start <span class="font-playfair italic text-santorini-500">Planning</span>
+        </h2>
+        <p class="font-inter text-lg text-charcoal-500 leading-relaxed mb-10">
+          Share your travel dreams with us. Within 24 hours, a personal guru will reach out to begin designing your perfect journey.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-santorini-50">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8621C" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-montserrat font-semibold text-sm text-charcoal-800 mb-1">Direct Contact</h4>
+              <p class="font-inter text-sm text-charcoal-500">hello@myworldguru.com</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-santorini-50">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8621C" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4 class="font-montserrat font-semibold text-sm text-charcoal-800 mb-1">Based In</h4>
+              <p class="font-inter text-sm text-charcoal-500">Santorini, Greece · Serving Worldwide</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-santorini-50">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8621C" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div>
+              <h4 class="font-montserrat font-semibold text-sm text-charcoal-800 mb-1">Response Time</h4>
+              <p class="font-inter text-sm text-charcoal-500">Within 24 hours · Mon–Sat</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right: Form -->
+      <div class="fade-up" style="transition-delay: 0.2s">
+        <form id="consultationForm" class="bg-white p-10 lg:p-12 border border-warm-200 shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-600 mb-2 block">Full Name</label>
+              <input type="text" class="form-input" placeholder="Your full name" required>
+            </div>
+            <div>
+              <label class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-600 mb-2 block">Email Address</label>
+              <input type="email" class="form-input" placeholder="your@email.com" required>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-600 mb-2 block">Phone Number</label>
+              <input type="tel" class="form-input" placeholder="+30 123 456 7890">
+            </div>
+            <div>
+              <label class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-600 mb-2 block">Destination Interest</label>
+              <select class="form-input">
+                <option value="">Select destination</option>
+                <option>Santorini</option>
+                <option>Mykonos</option>
+                <option>Athens</option>
+                <option>Crete</option>
+                <option>Paros</option>
+                <option>Naxos</option>
+                <option>Multi-Island Journey</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="mb-6">
+            <label class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-600 mb-2 block">Travel Dates</label>
+            <input type="text" class="form-input" placeholder="e.g., June 15 – June 25, 2026">
+          </div>
+          
+          <div class="mb-8">
+            <label class="font-montserrat text-xs font-medium tracking-widest uppercase text-charcoal-600 mb-2 block">Tell Us About Your Dream Journey</label>
+            <textarea class="form-input" rows="4" placeholder="Share your travel style, special occasions, must-have experiences..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary w-full text-center">Start Planning My Trip</button>
+          
+          <p class="font-inter text-xs text-charcoal-400 text-center mt-6">
+            By submitting, you agree to our privacy policy. We respect your data.
+          </p>
+        </form>
+      </div>
+    </div>
+    <!-- Form Success Message -->
+    <div id="formSuccess" class="hidden max-w-2xl mx-auto text-center py-12">
+      <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-santorini-500 rounded-full">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <h3 class="font-playfair font-semibold text-3xl text-charcoal-800 mb-4">Thank You</h3>
+      <p class="font-inter text-charcoal-500">Your journey request has been received. A personal guru will contact you within 24 hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9: HUBSPOT LEAD GENERATION -->
+<section class="py-20 lg:py-24 bg-white border-y border-warm-200">
+  <div class="max-w-5xl mx-auto px-6 lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="fade-up">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-12 h-px bg-santorini-500"></div>
+          <span class="font-montserrat text-xs font-medium tracking-[0.3em] uppercase text-santorini-500">Travel Inspiration</span>
+        </div>
+        <h2 class="font-playfair font-semibold text-3xl md:text-4xl text-charcoal-800 leading-tight mb-4">
+          Join Our <span class="font-playfair italic text-santorini-500">Inner Circle</span>
+        </h2>
+        <p class="font-inter text-base text-charcoal-500 leading-relaxed">
+          Receive exclusive travel inspiration, hidden gem discoveries, and early access to seasonal offers — curated by our Santorini gurus.
+        </p>
+      </div>
+      
+      <div class="fade-up" style="transition-delay: 0.15s">
+        <form id="newsletterForm" class="flex flex-col sm:flex-row gap-3">
+          <input type="email" class="form-input flex-1" placeholder="Your email address" required>
+          <button type="submit" class="btn-dark whitespace-nowrap">Subscribe</button>
+        </form>
+        <div class="flex flex-wrap gap-6 mt-6">
+          <div class="flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+            <span class="font-inter text-xs text-charcoal-500">Weekly inspiration</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+            <span class="font-inter text-xs text-charcoal-500">Exclusive offers</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="#E8621C"><path d="M8 0l2 5h5l-4 3 1.5 5L8 10l-4.5 3L5 8 1 5h5z"/></svg>
+            <span class="font-inter text-xs text-charcoal-500">No spam, ever</span>
+          </div>
+        </div>
+        <div id="newsletterSuccess" class="hidden mt-4 font-inter text-sm text-santorini-600">✓ Welcome to the Inner Circle!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10: FINAL CTA -->
+<section class="relative py-32 lg:py-44 overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="https://image.qwenlm.ai/public_source/94ef23e8-f800-424a-b551-1901da394c6d/1566bb476-38e0-4233-9ab1-d202e123ee64.png" alt="Dramatic Santorini sunset over caldera" class="w-full h-full object-cover object-center">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
+  </div>
+  
+  <div class="relative max-w-4xl mx-auto px-6 lg:px-10 text-center fade-up">
+    <div class="flex items-center justify-center gap-4 mb-8">
+      <div class="w-12 h-px bg-santorini-400"></div>
+      <span class="font-montserrat text-xs font-medium tracking-[0.3em] uppercase text-santorini-300">Your Journey Awaits</span>
+      <div class="w-12 h-px bg-santorini-400"></div>
+    </div>
+    <h2 class="font-playfair font-semibold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-8 text-balance">
+      Let's Design Your<br><span class="font-playfair italic text-santorini-300">Perfect Journey</span>
+    </h2>
+    <p class="font-inter text-lg text-white/80 leading-relaxed mb-12 max-w-2xl mx-auto">
+      Every extraordinary trip begins with a single conversation. Tell us your dreams — we'll craft the reality.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#consultation" class="btn-primary">Book Your Consultation</a>
+      <a href="#process" class="btn-outline">Learn Our Process</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-charcoal-900 text-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <a href="#" class="flex items-center gap-3 mb-6">
+          <img src="myworldguru2.jpg" alt="logo footer" style="width: 27px;">
+          <div class="flex flex-col">
+            <span class="font-playfair font-semibold text-white text-base leading-tight">MY WORLD</span>
+            <span class="font-playfair font-semibold text-santorini-400 text-base leading-tight">GURU</span>
+          </div>
+        </a>
+        <p class="font-inter text-sm text-white/60 leading-relaxed mb-6">
+          Luxury travel design and bespoke trip planning. Based in Santorini, crafting unforgettable journeys worldwide.
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 border border-white/20 hover:border-santorini-500 hover:bg-santorini-500 transition-all duration-300 flex items-center justify-center" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 border border-white/20 hover:border-santorini-500 hover:bg-santorini-500 transition-all duration-300 flex items-center justify-center" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 border border-white/20 hover:border-santorini-500 hover:bg-santorini-500 transition-all duration-300 flex items-center justify-center" aria-label="Pinterest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.67 7.9 6.44 9.34-.09-.78-.17-1.99.04-2.85.18-.78 1.17-4.97 1.17-4.97s-.3-.6-.3-1.48c0-1.39.81-2.43 1.81-2.43.86 0 1.27.64 1.27 1.41 0 .86-.55 2.14-.83 3.33-.24 1 .5 1.81 1.48 1.81 1.78 0 3.14-1.87 3.14-4.58 0-2.39-1.72-4.07-4.18-4.07-2.85 0-4.52 2.14-4.52 4.35 0 .86.33 1.78.75 2.28.08.1.09.19.07.29-.08.31-.25 1.01-.28 1.15-.05.19-.15.23-.35.14-1.31-.61-2.13-2.52-2.13-4.06 0-3.31 2.41-6.34 6.94-6.34 3.64 0 6.48 2.6 6.48 6.07 0 3.62-2.28 6.53-5.45 6.53-1.06 0-2.07-.55-2.41-1.21l-.66 2.5c-.24.91-.88 2.05-1.31 2.75.99.31 2.03.47 3.12.47 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </a>
+          <a href="#" class="w-10 h-10 border border-white/20 hover:border-santorini-500 hover:bg-santorini-500 transition-all duration-300 flex items-center justify-center" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-montserrat font-semibold text-xs tracking-[0.25em] uppercase text-white mb-6">Explore</h4>
+        <ul class="space-y-3">
+          <li><a href="#why" class="font-inter text-sm text-white/60 hover:text-santorini-400 transition-colors">Why My World Guru</a></li>
+          <li><a href="#experiences" class="font-inter text-sm text-white/60 hover:text-santorini-400 transition-colors">Signature Experiences</a></li>
+          <li><a href="#destinations" class="font-inter text-sm text-white/60 hover:text-santorini-400 transition-colors">Featured Destinations</a></li>
+          <li><a href="#process" class="font-inter text-sm text-white/60 hover:text-santorini-400 transition-colors">Our Process</a></li>
+          <li><a href="#testimonials" class="font-inter text-sm text-white/60 hover:text-santorini-400 transition-colors">Client Stories</a></li>
+        </ul>
+      </div>
+      
+      <!-- Services -->
+      <div>
+        <h4 class="font-montserrat font-semibold text-xs tracking-[0.25em] uppercase text-white mb-6">Services</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="font-inter text-sm text-white/60 hover:text-santorini-400 transition-colors">Bespoke Itinerary Design</a></li>
+          <li><a href="#" class="font-inter text-sm text-white/60 hover:text-santorini-400 transition-colors">Private Yacht Charters</a></li>
+          <li><a href="#" class="font-inter text-sm text-white/60 hover:text-santorini-400 transition-colors">VIP Transfers</a></li>
+          <li><a href="#" class="font-inter text-sm text-white/60 hover:text-santorini-400 transition-colors">On-Trip Live Support</a></li>
+          <li><a href="#" class="font-inter text-sm text-white/60 hover:text-santorini-400 transition-colors">Arrival Consultation</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact -->
+      <div>
+        <h4 class="font-montserrat font-semibold text-xs tracking-[0.25em] uppercase text-white mb-6">Contact</h4>
+        <ul class="space-y-3">
+          <li class="font-inter text-sm text-white/60">hello@myworldguru.com</li>
+          <li class="font-inter text-sm text-white/60">Santorini, Greece</li>
+          <li class="font-inter text-sm text-white/60">Mon – Sat · 9:00 – 19:00 EET</li>
+        </ul>
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <p class="font-inter text-xs text-white/40 leading-relaxed">
+            Licensed Greek Tourism Operator<br>
+            VAT & Registry details available upon request
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-inter text-xs text-white/40">
+        © 2026 MY WORLD GURU (E-SERVICE). All rights reserved. myworldguru.com
+      </p>
+      <div class="flex gap-6">
+        <a href="#" class="font-inter text-xs text-white/40 hover:text-santorini-400 transition-colors">Privacy Policy</a>
+        <a href="#" class="font-inter text-xs text-white/40 hover:text-santorini-400 transition-colors">Terms of Service</a>
+        <a href="#" class="font-inter text-xs text-white/40 hover:text-santorini-400 transition-colors">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll > 80) {
+    navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+    navbar.classList.remove('bg-transparent');
+  } else {
+    navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm');
+    navbar.classList.add('bg-transparent');
+  }
+  
+  lastScroll = currentScroll;
+});
+
+// Mobile menu
+const menuBtn = document.getElementById('menuBtn');
+const closeMenu = document.getElementById('closeMenu');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.add('open');
+  document.body.style.overflow = 'hidden';
+});
+
+closeMenu.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+});
+
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// Fade-up animation on scroll
+const fadeElements = document.querySelectorAll('.fade-up');
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+fadeElements.forEach(el => fadeObserver.observe(el));
+
+// Stat counter animation
+const statNumbers = document.querySelectorAll('.stat-number [data-target], .stat-number[data-target]');
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.getAttribute('data-target'));
+      let current = 0;
+      const increment = target / 60;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          el.textContent = target;
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.floor(current);
+        }
+      }, 25);
+      statObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+statNumbers.forEach(el => statObserver.observe(el));
+
+// Testimonial slider
+const track = document.getElementById('testimonialTrack');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentSlide = 0;
+const totalSlides = 3;
+
+function getSlidesPerView() {
+  if (window.innerWidth >= 1024) return 3;
+  if (window.innerWidth >= 768) return 2;
+  return 1;
+}
+
+function updateSlider() {
+  const slidesPerView = getSlidesPerView();
+  const maxSlide = totalSlides - slidesPerView;
+  if (currentSlide > maxSlide) currentSlide = maxSlide;
+  if (currentSlide < 0) currentSlide = 0;
+  const percentage = (currentSlide / totalSlides) * 100;
+  track.style.transform = `translateX(-${percentage}%)`;
+}
+
+prevBtn.addEventListener('click', () => {
+  currentSlide--;
+  if (currentSlide < 0) currentSlide = 0;
+  updateSlider();
+});
+
+nextBtn.addEventListener('click', () => {
+  const slidesPerView = getSlidesPerView();
+  const maxSlide = totalSlides - slidesPerView;
+  currentSlide++;
+  if (currentSlide > maxSlide) currentSlide = maxSlide;
+  updateSlider();
+});
+
+window.addEventListener('resize', updateSlider);
+
+// Auto-advance testimonials
+setInterval(() => {
+  const slidesPerView = getSlidesPerView();
+  const maxSlide = totalSlides - slidesPerView;
+  currentSlide++;
+  if (currentSlide > maxSlide) currentSlide = 0;
+  updateSlider();
+}, 6000);
+
+// Consultation form
+document.getElementById('consultationForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const success = document.getElementById('formSuccess');
+  form.style.display = 'none';
+  success.classList.remove('hidden');
+  success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
+// Newsletter form
+document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  document.getElementById('newsletterSuccess').classList.remove('hidden');
+  e.target.reset();
+  setTimeout(() => {
+    document.getElementById('newsletterSuccess').classList.add('hidden');
+  }, 4000);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      const offset = 80;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+});
+
+// Parallax effect on hero
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const hero = document.querySelector('.hero-parallax');
+  if (hero && scrolled < window.innerHeight) {
+    hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+  }
+});
+</script>
+</body>
+</html>
+
